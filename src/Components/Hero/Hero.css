@@ -1,56 +1,80 @@
-.hero{
-    height : 100vh;
-    background: linear-gradient(180deg , #fde1ff , #e1ffea22 60%);
-    display: flex;
+:root {
+    --primary-color: #d14d00e1; /* Soft pink */
+    --secondary-color: #be5046; /* Soft lavender */
+    --accent-color: #00e9ce00; /* Pale peach */
+    --text-color: #5D576B; /* Deep lavender */
+    --background-start: #FFF0F5; /* Very light pink */
+    --background-end: #E6E6FA; /* Light lavender */
 }
-.hero-left{
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-left {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding-left: 180px;
-    line-height: 1.1;
+    gap: 30px;
 }
-.hero-left h2{
-    color : #090909;
-    font-size:26px;
-    font-weight: 600;
 
-}
-.hero-left p{
-    color : #171717;
-    font-size: 80px;
+.hero-left h2 {
+    color: var(--secondary-color);
+    font-size: 24px;
     font-weight: 600;
-    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-.hero-hand-icon{
+
+.hero-left p {
+    color: var(--text-color);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-hand-icon {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.hero-hand-icon img{
-    width: 105px;
+
+.hero-hand-icon img {
+    width: 80px;
+    filter: opacity(0.8);
 }
-.hero-latest-btn{
-    display: flex;
+
+.hero-latest-btn {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width : 310px;
-    height : 70px;
-    border-radius : 75px ;
-    margin-top : 30px;
-    background: #ff4141;
-    color : white;
-    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 18px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero-right{
-    flex : 1;
-    display : flex;
-    align-items: center;
-    justify-content: center;
+.hero-latest-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
-    
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
