@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App.css */
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  flex: 1;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Mobile Styles */
+.mobile .content {
+  padding: 10px;
+}
+
+/* Responsive styles for components */
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-login-cart {
+    margin-top: 20px;
+  }
+
+  .nav-login-cart button {
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .ShopCategory img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Product {
+    flex-direction: column;
+  }
+
+  .ProductDisplay {
+    width: 100%;
+  }
+
+  .ProductInfo {
+    width: 100%;
+  }
+
+  .Cart-items {
+    width: 100%;
+  }
+
+  .LoginSignUp {
+    width: 100%;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navBar {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    gap: 30px;
+  }
+
+  .ShopCategory img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Product {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .ProductDisplay, .ProductInfo {
+    width: 50%;
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1025px) {
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
